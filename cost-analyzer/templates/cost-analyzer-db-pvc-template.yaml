@@ -13,9 +13,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
-  {{- if .Values.persistentVolume.dbStorageClass }}
-  storageClassName: {{ .Values.persistentVolume.dbStorageClass }}
-  {{ end }}
+  storageClassName: ""
   resources:
     requests:
     {{- if .Values.persistentVolume }}
